@@ -1,0 +1,110 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 18px;
+}
+
+.container {
+    min-width: 1440px;
+    padding: 0 120px;
+    margin: 0 auto;
+}
+
+.main-header {
+    margin-top: 13px;
+    min-height: 54px;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.menu .eng {
+    font-size: 22px;
+    line-height: 18px;
+    margin-right: 50px;
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-right: 50px;
+}
+
+.menu .doc-title {
+    font-size: 22px;
+    line-height: 28px;
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.main-header img {
+    width: 238px;
+}
+
+.container h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 70px;
+}
+
+.container h2::before {
+    content: url(./img/divider.png);
+    margin-right: 20px;
+    vertical-align: 15%;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 60px;
+    border-top: 2px solid #E6E6E6;
+    border-bottom: 2px solid #E6E6E6;
+    padding: 20px 0;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 270px;
+    height: 180px;
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-back {
+    transform: rotateY(180deg);
+  }
+
+
+
+
