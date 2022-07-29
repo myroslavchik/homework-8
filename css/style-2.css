@@ -62,7 +62,7 @@ html {
 }
 
 .container h2::before {
-    content: url(./img/divider.png);
+    content: url(../img/divider.png);
     margin-right: 20px;
     vertical-align: 15%;
 }
