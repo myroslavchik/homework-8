@@ -17,8 +17,9 @@ html {
 }
 
 .main-header {
-    margin-top: 13px;
+    margin-top: 0;
     min-height: 54px;
+    padding-top: 13px;
 }
 
 .main-header .container {
@@ -30,7 +31,6 @@ html {
 
 .menu .eng {
     font-size: 22px;
-    line-height: 18px;
     margin-right: 50px;
     font-family: 'Tourney';
     font-style: normal;
@@ -46,6 +46,18 @@ html {
     font-style: normal;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+
+.menu .slash::after {
+    content: '/';
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu .doc-title a {
+    text-decoration: none;
+    color: #000;
 }
 
 .main-header img {
@@ -117,8 +129,9 @@ html {
     }
     
     .main-header {
-        margin-top: 5px;
+        margin-top: 0;
         min-height: 0;
+        padding-top: 13px;
     }
     
     .main-header .container {
@@ -137,6 +150,17 @@ html {
     .menu .doc-title {
         font-size: 12px;
         line-height: 28px;
+    }
+
+    .menu .doc-title a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .menu .slash::after {
+        content: '/';
+        margin-left: 5px;
+        margin-right: 5px;
     }
     
     .main-header img {

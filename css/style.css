@@ -20,6 +20,7 @@ header {
     position: sticky;
     top: 0;
     background-color: #fff;
+    padding-top: 13px;
 }
 
 
@@ -48,6 +49,17 @@ header {
     font-size: 12px;
     line-height: 28px;
     text-transform: uppercase;
+}
+
+.menu .doc-title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu .slash::after {
+    content: '/';
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .main-header img {
@@ -196,8 +208,8 @@ main {
     }
 
     .main-header {
-        margin-top: 13px;
         min-height: 54px;
+        padding-top: 13px;
     }
 
     .main-header .container {
@@ -216,6 +228,12 @@ main {
     .menu .doc-title {
         font-size: 22px;
         line-height: 28px;
+    }
+
+    .menu .slash::after {
+        content: '/';
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .main-header img {
