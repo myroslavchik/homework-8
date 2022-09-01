@@ -1,3 +1,17 @@
+/*review*/
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -9,8 +23,8 @@ html {
 }
 
 .container {
-    max-width: 930px;
-    padding: 0 12px;
+    max-width: 1170px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -18,14 +32,18 @@ header {
     position: sticky;
     top: 0;
     background-color: #fff;
+    padding-top: 13px;
+    z-index: 999;
 }
 
 
 .main-header .container {
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    padding: 5px;
 }
 
 
@@ -48,12 +66,23 @@ header {
     text-transform: uppercase;
 }
 
+.menu .doc-title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu .slash::after {
+    content: '/';
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .main-header img {
     width: 130px;
 }
 
 main {
-    background-image: url(./img/bg-picture.png);
+    background-image: url(../img/bg-picture.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: contain;
@@ -62,6 +91,7 @@ main {
 
 .container .side-bar {
     margin-top: 10px;
+    margin-bottom: 32px;
 }
 
 .container .side-bar ul {
@@ -78,7 +108,6 @@ main {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 18px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     border-bottom: 1px solid grey;
@@ -89,43 +118,44 @@ main {
     color: black;
 }
 
-.container .main  {
-    margin-top: 23px;
-}
 
-.main .title::before {
-    content: url(./img/divider-mobile.png);
-    position: absolute;
-    transform: translateY(-25px);
-}
-
-.main .title {
+main .title {
     font-family: 'Francois One';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 28px;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+main .title::before {
+    content: "";
+    display: inline-block;
+    margin-right: 20px;
+    width: 50px;
+    height: 4px;
+    background: #000000;
+    position: absolute;
+    top: -10px;
 }
 
 
-.main .chapter {
+main .chapter {
     font-family: 'Farro';
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
-    line-height: 10px;
     vertical-align: 80%;
+    text-transform: none;
+    margin-left: 5px;
 }
 
 
-.main p {
-    margin-top: 20px;
+main p {
+    margin-top: 0;
 }
 
-.chapter-list {
-    margin-top: 25px;
-}
 
 .chapter-1 p {
     font-family: 'PT Sans';
@@ -133,6 +163,7 @@ main {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    margin-bottom: 35px;
 }
 
 .chapter-2 p {
@@ -141,6 +172,7 @@ main {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    margin-bottom: 35px;
 }
 
 .p3 {
@@ -149,15 +181,17 @@ main {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    margin-bottom: 35px;
 }
 
 .li {
-    margin-top: 20px;
+    margin-top: 0;
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    margin-bottom: 20px;
 }
 
 .chapter-4 {
@@ -166,7 +200,8 @@ main {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
-    margin-bottom: 90px;
+    margin-bottom: 0;
+    padding-bottom: 90px;
 }
 
 .underline {
@@ -188,14 +223,15 @@ main {
 @media only screen and (min-width: 1200px) {
 
     .container {
-        min-width: 1440px;
-        padding: 0 120px;
+        min-width: 1200px;
+        padding: 0;
         margin: 0 auto;
     }
 
     .main-header {
-        margin-top: 13px;
         min-height: 54px;
+        padding-top: 30px;
+        margin-bottom: 70px;
     }
 
     .main-header .container {
@@ -216,19 +252,26 @@ main {
         line-height: 28px;
     }
 
+    .menu .slash::after {
+        content: '/';
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .main-header img {
         width: 238px;
     }
 
-    .container .main {
+    .text {
         max-width: 785px;
-        margin-left: 385px;
+        margin-left: 395px;
     }
 
     .container .side-bar {
         max-width: 385px;
         position: fixed;
         margin-top: 0;
+        margin-bottom: 0;
     }
     
     .container .side-bar ul {
@@ -236,7 +279,7 @@ main {
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 70px;
+        gap: 0;
     }
 
     .container .side-bar ul li {
@@ -248,7 +291,12 @@ main {
         line-height: 48px;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        border-bottom: 1px solid grey;
+        border-bottom: 2px solid BDBDBD;
+        margin-bottom: 70px;
+    }
+
+    .container .side-bar ul li:last-child {
+        margin-bottom: 0;
     }
 
     .container .side-bar ul li a {
@@ -256,26 +304,33 @@ main {
         color: black;
     }
     
-    .container .main  {
-        margin-top: 70px;
+    main .container  {
+        margin-top: 0;
     }
 
-    .main .title {
+    main .title {
+        position: relative;
         font-family: 'Francois One';
         font-style: normal;
         font-weight: 400;
         font-size: 36px;
         line-height: 48px;
         text-transform: uppercase;
+        margin-bottom: 40px;
     }
 
-    .main .title::before {
-        content: url(./img/divider.png);
+    main .title::before {
+        content: "";
+        display: inline-block;
+        margin-right: 20px;
+        width: 100px;
+        height: 8px;
+        background: #000000;
         position: absolute;
-        transform: translateY(-40px);
+        top: -10px;
     }
     
-    .main .chapter {
+    main .chapter {
         font-family: 'Farro';
         font-style: normal;
         font-weight: 300;
@@ -284,13 +339,10 @@ main {
         vertical-align: 80%;
     }
 
-    .main p {
-        margin-top: 40px;
+    main p {
+        margin-top: 0;
     }
     
-    .chapter-list {
-        margin-top: 70px;
-    }
 
     .chapter-1 p {
         font-family: 'PT Sans';
@@ -298,6 +350,7 @@ main {
         font-weight: 400;
         font-size: 28px;
         line-height: 48px;
+        margin-bottom: 70px;
     }
     
     .chapter-2 p {
@@ -306,6 +359,7 @@ main {
         font-weight: 400;
         font-size: 28px;
         line-height: 48px;
+        margin-bottom: 70px;
     }
 
     .p3 {
@@ -315,14 +369,23 @@ main {
         font-size: 28px;
         line-height: 48px;
     }
+
+    .chapter-3 {
+        margin-bottom: 70px;
+    }
     
     .li {
-        margin-top: 20px;
+        margin-top: 0;
         font-family: 'PT Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 28px;
         line-height: 48px;
+        margin-bottom: 20px;
+    }
+
+    .li:last-child {
+        margin-bottom: 0;
     }
 
     .chapter-4 {
@@ -331,7 +394,7 @@ main {
         font-weight: 400;
         font-size: 28px;
         line-height: 48px;
-        margin-bottom: 90px;
+        margin-bottom: 0;
     }
 
     
