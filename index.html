@@ -36,50 +36,61 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <aside class="side-bar">
-                <ul>
-                    <li><a href="#introduction">Introduction</a></li>
-                    <li><a href="#components">Core components</a></li>
-                    <li><a href="#fundamentals">React fundamentals</a></li>
-                    <li><a href="#text">Handling text input</a></li>
-                </ul>
-            </aside>
-        </div>
-        <div class="container">
-            <div class="main">
-                <ul>
-                    <li class="chapter-list chapter-1">
-                        <span class="title" id="introduction">Introduction</span>
-                        <span class="chapter">Chapter 1</span>
-                        <p>Welcome to the very start of your React Native journey!
-                            If you're looking for environment setup instructions,
-                            they've moved to <span class="underline">their own section</span>. Continue reading
-                            for an introduction to the documentation, Native Components,
-                            React, and more!
-                        </p>
-                    </li>
-                    <li class="chapter-list chapter-2">
-                        <span class="title title2" id="components">Core components</span>
-                        <span class="chapter">Chapter 2</span>
-                        <p>React Native is an open source framework for building Android
-                            and iOS applications using React and the app platform’s native capabiles.
-                            With React Native, you use JavaScript to access your platform’s APIs
-                            as well as to describe the appearance and behavior of your UI using
-                            React components: <span class="italic">bundles of reusable, nestable code.</span>
-                            You can learn more about React in the next section. But first,
-                            let’s cover how components work in React Native.
-                        </p>
-                    </li>
-                    <li class="chapter-list chapter-3"></li>
-                    <span class="title title3" id="fundamentals">React fundamentals</span>
-                    <span class="chapter">Chapter 3</span>
+        <h1 class="visually-hidden">Position-transform</h1>
+        <section>
+            <h2 class="visually-hidden">Menu</h2>
+            <div class="container">
+                <aside class="side-bar">
+                    <h3 class="visually-hidden">Menu</h3>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#components">Core components</a></li>
+                        <li><a href="#fundamentals">React fundamentals</a></li>
+                        <li><a href="#text">Handling text input</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+        <section class="chapter-1">
+            <div class="container">
+                <div class="text">
+                    <h2 class="title" id="introduction">Introduction<span class="chapter">Chapter 1</span></h2>
+                    <p>Welcome to the very start of your React Native journey!
+                        If you're looking for environment setup instructions,
+                        they've moved to <span class="underline">their own section</span>. Continue reading
+                        for an introduction to the documentation, Native Components,
+                        React, and more!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="chapter-2">
+            <div class="container">
+                <div class="text">
+                    <h2 class="title title2" id="components">Core components<span class="chapter">Chapter 2</span></h2>
+                    <p>React Native is an open source framework for building Android
+                        and iOS applications using React and the app platform’s native capabiles.
+                        With React Native, you use JavaScript to access your platform’s APIs
+                        as well as to describe the appearance and behavior of your UI using
+                        React components: <span class="italic">bundles of reusable, nestable code.</span>
+                        You can learn more about React in the next section. But first,
+                        let’s cover how components work in React Native.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="chapter-3">
+            <div class="container">
+                <div class="text">
+                    <h2 class="title title3" id="fundamentals">React fundamentals<span class="chapter">Chapter 3</span></h2>
                     <p class="p3">React Native runs on <span class="underline">React</span>, a popular open source library
                         for building user interfaces with JavaScript. To make
                         the most of React Native, it helps to understand React itself.
                         This section can get you started or can serve as a refresher course.
                     </p>
-                    <p class="p3">We’re going to cover the core concepts behind React:
+                    <p class="p3">
+                        We’re going to cover the core concepts behind React:
+                    </p>
                         <ul>
                             <li class="li"><span class="bold">+ components.</span> The rest of this introduction to React
                                 uses cats in its examples: friendly, approachable creatures
@@ -87,12 +98,12 @@
                             </li>
                             <li class="li"><span class="bold">+ JSX.</span> React and React Native use JSX, a syntax that lets you
                                 write elements inside JavaScript like so:
-                                <span class="grey">&ltText&gtHello, I am your cat!&lt/Text&gt.</span>
+                                <span class="grey">&lt;Text&gt;Hello, I am your cat!&lt;/Text&gt;.</span>
                             </li>
                             <li class="li">The React docs have a <span class="underline">comprehensive guide to JSX</span> you can refer to
                                 learn even more. Because JSX is JavaScript, you can use variables
                                 inside it. Here you are declaring a <span class="grey">name</span> for the cat, name, and
-                                embedding it with curly braces inside <span class="grey">&ltText&gt.</span>
+                                embedding it with curly braces inside <span class="grey">&lt;Text&gt;.</span>
                             </li>
                             <li class="li"><span class="bold">+ props.</span> Props is short for “properties”. 
                             </li>
@@ -102,23 +113,25 @@
                                 State gives your components memory!
                             </li>
                         </ul>
-                    </p>
-                    <li class="chapter-list chapter-4">
-                        <span class="title title4" id="text">Handling text input</span>
-                        <span class="chapter">Chapter 4</span>
-                        <p>TextInput is a Core Component that allows the user to enter text.
-                           It has an <span class="italic">onChangeText</span> prop that takes a function to be called every time the text changed,
-                           and an onSubmitEditing prop that takes a function to be called when the text is submitted.
-                        </p>
-                        <p>For example, let's say that as the user types, you're translating their
-                           words into a different language. In this new language, every single word
-                           is written the same way: <span class="pizza">🍕</span>. So the sentence "Hello there Bob" would be
-                           translated as "<span class="pizza">🍕Hello</span> <span class="pizza"></span>🍕</span>".
-                        </p>
-                    </li>
-                </ul>
+                </div>
             </div>
-        </div>
+        </section>
+        <section class="chapter-4">
+            <div class="container">
+                <div class="text">
+                    <h2 class="title title4" id="text">Handling text input<span class="chapter">Chapter 4</span></h2>
+                    <p>TextInput is a Core Component that allows the user to enter text.
+                        It has an <span class="italic">onChangeText</span> prop that takes a function to be called every time the text changed,
+                        and an onSubmitEditing prop that takes a function to be called when the text is submitted.
+                    </p>
+                    <p>For example, let's say that as the user types, you're translating their
+                        words into a different language. In this new language, every single word
+                        is written the same way: 🍕. So the sentence "Hello there Bob" would be
+                        translated as "🍕🍕".
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
